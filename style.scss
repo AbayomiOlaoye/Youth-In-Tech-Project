@@ -1,4 +1,5 @@
 @import url('http://fonts.cdnfonts.com/css/cocogoose');
+@import url('http://fonts.cdnfonts.com/css/lato');
 
 // Sass maps for colors to be used with 'map-get()'
 $title: 'cocogoose', sans-serif;
@@ -26,12 +27,12 @@ $colors: (
 }
 
 body {
-  font-family: $title;
-  font-size: 1rem;
+  font-family: $text;
+  font-size: 0.8rem;
   width: 100%;
   height: 100vh;
   background-color: colors(grayWhite);
-  line-height: 2rem;
+  line-height: 1.5rem;
   color: colors(darkShade);
 
   a {
@@ -54,56 +55,108 @@ body {
     }  
   }
 
-    .header {
-      display: none;
-    }
+ .header {
+    display: none;
+  }
+
+  .container {
+    padding: 2rem;
+    position: relative;
+  }
+
 
     main {
-      .welcome {
-        width: 100%;
-        background-image: url(./images/bgyouth-tech.svg);
-        background-repeat: no-repeat;
-        background-size: auto;
-        height: auto;
-      }
-      .container {
-        padding: 8rem 2rem;
+      // Common rules for specific elements
+      background-image: url(./images/masked.svg);
+      background-repeat: no-repeat;
+      background-size: auto;
+      background-position: top left;
 
-        .gradient {
+      .intro {
+        font-size: 1.5rem;
+        color: colors(grayWhite);
+        margin: 0 auto 1rem auto;
+        text-align: center;
+      }
+    
+      .line {
+        width: 10%;
+        text-align: center;
+        margin: 0 auto 2rem auto;
+        color: colors(coolPink);
+      }
+    
+      // Rules for hero page
+      .welcome {
+        background-image: url(./images/mobile-bgyouth-tech.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+       
+        .intro.gradient {
           font-family: $text;
           font-size: 1.5rem;
           font-weight: 400;
-          color: colors(coolPink);
+          background-image: -webkit-linear-gradient(-35deg, #f65112, #a00000, #f40001, #ec5242);
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          margin-top: 6.5rem;
+          text-align: left;
         }
 
         .theme {
           font-family: $title;
-          font-size: 5rem;
-          line-height: 5rem;
+          font-size: 4.5rem;
+          line-height: 4.5rem;
           padding-top: 1rem;
-          color: colors(coolPink); // gradient color
+          background-image: -webkit-linear-gradient(-35deg, #a00000, #f65112, #ec5242, #f40001, #ec5242);
+          background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-size: 300%;
+          animation: theme-motion 10s infinite alternate;
+
+          @keyframes theme-motion {
+            0% {
+              background-position: left;
+            }
+
+            50% {
+              background-position: right bottom;
+            }
+
+            75% {
+              background-position: left bottom;
+            }
+
+
+            100% {
+              background-position: right;
+            }
+          }
         }
 
         .intro-text {
-          margin: 2rem 1.5rem;
-          max-width: 90%;
+          margin: 2rem 0;
           background-color: colors(grayWhite);
-          padding: 1.5rem;
+          padding: 1rem;
           border: 2px solid #fff;
           border-radius: 0.25rem;
+          opacity: 0.8;
         }
 
         .date {
-          font-size: 2.5rem;
-          font-weight: 700;
-          line-height: 4.5rem;
+          font-size: 1.8rem;
+          font-weight: 400;
+          font-family: $title;
+          
         }
 
         address {
-          font-size: 1.5rem;
+          font-size: 1rem;
+          padding: 0.5rem 0 4rem 0
+        }
       }
-    }
 
+    // Styling rules for features section
     .features {
       background-image: url(./images/features-bg.jpg);
       background-repeat: repeat;
@@ -115,32 +168,148 @@ body {
         display: flex;
         flex-direction: column;
         gap: 1rem;
+        justify-content: space-between;
 
         .pro-cards {
           display: flex;
           flex-direction: row;
-          justify-content: space-evenly;
+          justify-content: space-between;
+          padding: 1rem;
           align-items: center;
           flex-wrap: nowrap;
           background-color: rgba(211, 211, 211, 0.2);
           color: colors(grayWhite);
+          gap: 0.5rem;
+          border-radius: 5px;
 
           img {
-            width: 50px;
-            height: auto;
-            margin: 0;
+            width: 10%;
+            min-width: 3rem;
+            margin: 0.5rem 0 0 0;
           }
 
           .feat-bold {
+            width: 20%;
             color: colors(coolPink);
             font-weight: 700;
-            font-size: 1.25rem;
+            font-size: 1rem;
+            line-height: 1.25rem;
           }
 
           .small-text {
-            max-width: 500px;
+            width: 60%;
+            font-size: 0.8rem;
+            line-height: 1.5rem;
+            font-weight: 700;
           }
         }
+
+        a.intro {
+          font-size: 1rem;
+          font-weight: 700;
+          color: colors(grayWhite);
+          margin-top: 2.5rem;
+
+          &.lg {
+            display: none;
+            text-transform: uppercase;
+            text-decoration: underline;
+          }
+
+          &.sm {
+            background-color: colors(coolPink);
+            padding: 1.5rem 2rem;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+    
+    // Declarations for Speaker's section async as JSON
+    .speaker-section {
+      h3.intro {
+        text-align: center;
+      }
+      .intro {
+        color: colors(darkShade);
+        text-align: left;
+      }
+
+      .featured-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        .speaker {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          gap: 1.25rem;
+
+          img {
+            max-width: 110px;
+            max-height: 110px;
+            border-radius: 5%;
+            background-color: #272a31;
+            box-shadow: 2px 2px 4px;
+            border-bottom-right-radius: 30%;
+          }
+
+          .white {
+            font-size: 1.15rem;
+            margin: 0;
+          }
+
+          .line {
+            //text-align: left;
+            margin: 0.5rem 0 0.8rem 0;
+            width: 5%;
+            opacity: 0.3;
+            color: colors(darkShade);
+          }
+
+          .info {
+            color: colors(coolPink);
+          }
+        }
+      }
+    } //Ends here
+
+    //Sponsors & Partners
+    .partners {
+      background-color: colors(darkShade);
+      .intro {
+        opacity: 0.5;
+      }
+
+      .sponsors-logo {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2.5rem;
+        justify-content: space-evenly;
+        padding-bottom: 2rem;
+
+        img {
+          width: 30%;
+          max-width: 100px;
+        }
+      }
+    } // Ends .header
+  }
+
+  // Footer styling rules begins
+  footer {
+    width: 100%;
+    text-align: left;
+    font-size: 0.8rem;
+
+    .container {
+      display: flex;
+      gap: 2rem;
+      justify-content: space-between;
+
+      img {
+        max-width: 150px;
       }
     }
   }
