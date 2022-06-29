@@ -9,9 +9,27 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <!-- Header section with two child divisions -->
-    <header class="header">
+  
+  <!-- menu controls for small screens up to 767px -->
+  <div class="menu-controls">
+    <img src="./images/menu.svg" alt="menu icon" class="menu open">
+    <img src="./images/Close.png" alt="close menu button" class="menu exit">
+  </div>
+  <!-- Header section with two child divisions -->
+  <header class="header">
+    <div class="navbar">
+      <div class="logo"><a href="index.html" class="logo"><img src="./images/logo.svg" alt="youths in tech logo" class="yntech-logo"></a></div>
+        
+      <nav>
+        <ul class="nav-list">
+          <li><a href="about.html">About</a></li>
+          <li><a href="#">Program</a></li>
+          <li><a href="#">Join</a></li>
+          <li><a href="#">News</a></li>
+          <li><a href="#" class="gradient">Sponsor</a></li>
+        </ul>
+      </nav>
+      <!-- To be styled with position absolute on bigger-->
       <div class="acct-detail">
         <ul class="acct-list">
           <li><a href="#"><img src="./images/Facebook.png" alt="facebook logo as link" class="facebook"></a></li>
@@ -21,93 +39,79 @@
           <li><a href="#">Logout <img src="./images/sign-out.png" alt="logout icon"></a></li>
         </ul>
       </div>
-      <div class="navbar">
-        <!-- menu controls for small screens up to 767px -->
-        <div class="menu-controls">
-          <img src="./images/menu.svg" alt="menu icon" class="menu">
-          <img src="./images/Close.png" alt="close menu button" class="menu">
-        </div>
-        <div class="logo"><a href="index.html" class="logo"><img src="./images/logo.svg" alt="youths in tech logo" class="yntech-logo"></a></div>
-        
-        <nav>
-          <ul class="nav-list">
-            <li><a href="about.html">About</a></li>
-            <li><a href="#">Program</a></li>
-            <li><a href="#">Join</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#" class="gradient">Sponsor</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+    </div>
+  </header>
 
-    <!-- Home Page for main interaction -->
-    <main>
-      <section class="welcome">
+  <!-- Home Page for main interaction -->
+  <main>
+    <section class="welcome">
+      <div class="container">
         <h3 class="intro gradient">"Hey Techie!"</h3>
         <h1 class="theme">Youths 'n' Tech Global Summit 2022</h1>
         <p class="intro-text">
-          An initiative that inspires, motivates and shares the joy of being part of the “Make-It-Happen”, 
-          bringing myriads of developers, programmers as well as new entrants in the tech space in a common 
-          ecosytem of networking and ideation with cental focus on improving work experiences and expanding 
+          An initiative that inspires, motivates and shares the joy of being part of the “Make-It-Happen”,
+          bringing myriads of developers, programmers as well as new entrants in the tech space in a common
+          ecosytem of networking and ideation with cental focus on improving work experiences and expanding
           the congregation of honest developers.
         </p>
         <p class="date">2022.07.21(thu) ~ 23(Sat)</p>
         <address>@ 8/9, Marina Road, Onikan Lagos, Nigeria.</address>
-      </section>
+      </div>
+    </section>
 
-      <!-- Program Features section -->
-      <section class="features">
+    <!-- Program Features section -->
+    <section class="features">
+      <div class="container">
         <h3 class="intro">Agenda</h3>
         <hr class="line">
         <div class="program">
           <div class="pro-cards">
             <img src="./images/speaker.svg" alt="meme on a podium">
             <h4 class="feat-bold">Lecture</h4>
-            <p class="small-text">ere from industry experts with proven experiences with various 
-              technologies, cross-organizational skills on team management, self management 
-              and other job related facts.
+            <p class="small-text">Listen to industry experts on recent technologies, cross-organizational skills 
+              on team management, self management and other job related facts.
             </p>
           </div>
           <div class="pro-cards">
             <img src="./images/exhibition.svg" alt="image of drawing space">
             <h4 class="feat-bold">Y<em>'n'</em>Tech Exhibition</h4>
-            <p class="small-text">Appreciate various Eureka moments of breakthrough whether earning 
-              job positions or the proficiency deployed at ameliorating basic challenges that 
-              clients/users face in this unfolding era of data security and the management of 
-              other web assets.
+            <p class="small-text">Come see diverse proficiencies deployed to ameliorating basic challenges that
+              clients/users face in this unfolding era of data security and the management of
+              other web assets for improved accessibility.
             </p>
           </div>
           <div class="pro-cards">
             <img src="./images/forum.svg" alt="images of texts">
             <h4 class="feat-bold">Forum</h4>
-            <p class="small-text">Get to share your thought processes on specific topics, coding 
-              challenges and ask questions about identified hiring agencies of companies 
+            <p class="small-text">Get to share your thought processes on specific topics, coding
+              challenges and ask questions about identified hiring agencies of companies
               from experts.
             </p>
           </div>
           <div class="pro-cards">
             <img src="./images/workshop.svg" alt="image of a board and a painting brush">
             <h4 class="feat-bold">Workshop</h4>
-            <p class="small-text">Jointly deploy individual competencies and strengths 
-              using open source license for greater good while boosting your your 
+            <p class="small-text">Jointly deploy individual competencies and strengths
+              using open source license for greater good while boosting your your
               resume for future job searching.
             </p>
           </div>
           <div class="pro-cards">
             <img src="./images/netmind.svg" alt="image of network nodes">
             <h4 class="feat-bold">Y<em>'n'</em>Tech Meet &amp; NetUp</h4>
-            <p class="small-text">Reduce your waiting chances and increase your network 
-              spread amongst pros from various parts of the world and diverse 
+            <p class="small-text">Reduce your waiting chances and increase your network
+              spread amongst pros from various parts of the world and diverse
               organizations.
             </p>
           </div>
           <a href="about.html" class="intro">Check the whole program</a>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Speakers section to be loaded dynamically as JSON -->
-      <section class="speakers">
+    <!-- Speakers section to be loaded dynamically as JSON -->
+    <section class="speakers">
+      <div class="container">
         <h3 class="intro">Featured Speakers</h3>
         <hr class="line">
         <div class="featured-container">
@@ -166,10 +170,12 @@
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <!-- Sponsors & Partners -->
-      <section class="partners">
+    <!-- Sponsors & Partners -->
+    <section class="partners">
+      <div class="container">
         <h4 class="into fade">Partner</h4>
         <hr class="line">
         <div class="sponsors-logos">
@@ -179,18 +185,20 @@
           <img src="" alt="linkedin's">
           <img src="" alt="UBA's">
         </div>
-      </section>
-    </main>
-    <footer>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container">
       <div class="end-logo">
         <img src="./images/composite.png" alt="main logo for Youths in Tech" class="composite-logo">
       </div>
       <div class="foot-note">
         <small class="copy">&copy; 2022 Youths 'n' Tech. Some rights Reserved</small>
-        <p class="pps">For photo credits, check project's <a href="http://www.github.com/MindPrepDev/Youth-in-Tech/README.md">GitHub</a> 
+        <p class="pps">For photo credits, check project's <a href="http://www.github.com/MindPrepDev/Youth-in-Tech/README.md">GitHub</a>
           page. Also, don't forget to give <a href="http://www.github.com/MindPrepDev/Youth-in-Tech/README.md">this project</a>a star if you like it!</p>
       </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 </body>
 </html>
