@@ -10,35 +10,37 @@
 </head>
 <body>
   
-  <!-- menu controls for small screens up to 767px -->
-  <div class="menu-controls">
-    <img src="./images/menu.svg" alt="menu icon" class="menu open">
-    <img src="./images/Close.png" alt="close menu button" class="menu exit">
-  </div>
+  
   <!-- Header section with two child divisions -->
   <header class="header">
+      <!-- menu controls for small screens up to 767px -->
+    <div class="menu-controls">
+      <img src="./images/menu.svg" alt="menu icon" class="menu">
+      <img src="./images/Close.png" alt="close menu button" class="menu">
+    </div>
     <div class="navbar">
       <div class="logo"><a href="index.html" class="logo"><img src="./images/logo.svg" alt="youths in tech logo" class="yntech-logo"></a></div>
         
       <nav>
         <ul class="nav-list">
-          <li><a href="about.html">About</a></li>
-          <li><a href="#">Program</a></li>
-          <li><a href="#">Join</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#" class="gradient">Sponsor</a></li>
+          <li class="hide-big"><a href="index.html">Home</a></li><hr class="line">
+          <li><a href="about.html">About</a></li><hr class="line">
+          <li><a href="#">Program</a></li><hr class="line">
+          <li><a href="#">Join</a></li><hr class="line">
+          <li><a href="#">News</a></li><hr class="line">
+          <li><a href="#" class="gradient">Sponsor</a></li><hr class="line">
         </ul>
-      </nav>
-      <!-- To be styled with position absolute on bigger-->
-      <div class="acct-detail">
-        <ul class="acct-list">
-          <li><a href="#"><img src="./images/Facebook.png" alt="facebook logo as link" class="facebook"></a></li>
-          <li><a href="#"><img src="./images/tweetUs.png" alt="twitter button" class="tweet"></a></li>
-          <li><a href="#">English</a></li>
-          <li><a href="#">My Page</a></li>
-          <li><a href="#">Logout <img src="./images/sign-out.png" alt="logout icon"></a></li>
-        </ul>
-      </div>
+        <!-- To be styled with position absolute on bigger-->
+        <div class="acct-detail">
+          <ul class="acct-list">
+            <li><a href="#"><img src="./images/Facebook.png" alt="facebook logo as link" class="facebook"><span class="hide">Follow on Facebook</span></a></li>
+            <li><a href="#"><img src="./images/tweetUs.png" alt="twitter button" class="tweet"><span class="hide">Follow on Twitter</span></a></li>
+            <li><a href="#">English</a></li>
+            <li><a href="#"><img src="./images/user.png" alt="user account icon"><span class="hide">My Page</span></a></li>
+            <li class="pad"><a href="#"><img src="./images/sign-out.png" alt="logout icon"> <span class="hide"> Logout</span></a></li>
+          </ul>
+        </div>
+    </nav>
     </div>
   </header>
 
@@ -58,8 +60,7 @@
         <p class="text">Please contact us for more information, enquiry or any special 
           request about <span>Y'n'Tech Global Summit 2022</span> via email:
           <span><a href="mailto:mindprepopps@gmail.com" class="date">yntechglobalsummit2022@youngdev.org</a></span>
-          </p
-        
+        </p> 
       </div>
     </section>
 
@@ -80,7 +81,7 @@
     <!-- Past Events -->
     <section class="events">
       <div class="container">
-        <h3 class="intro"> See Highlight of Past Y<i>'n'</i>Tech Global Summits</h3>
+        <h3 class="intro"> See Past Y<i>'n'</i>Tech Global Summits</h3>
         <hr class="line">
         <p class="intro-text">Here's a few sneak into the highlights of last two congregation of 
           intentional young men in tech held at South Africa and Kenya.</p>
