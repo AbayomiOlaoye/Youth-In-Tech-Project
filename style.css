@@ -99,7 +99,7 @@ body .container .text {
   max-width: 400px;
   margin: 0 auto;
 }
-@media screen and (min-width: 729px) {
+@media screen and (min-width: 768px) {
   body .container {
     max-width: 80vw;
     margin: 0 auto;

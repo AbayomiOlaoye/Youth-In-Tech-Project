@@ -47,7 +47,7 @@ body {
   section {
     padding-bottom: 2rem;
   }
-  
+
 // Menu controls for user toggling
 .menu-controls {
   position: relative;
@@ -136,13 +136,13 @@ body {
       max-width: 400px;
       margin: 0 auto;
     }
-    @media screen and (min-width: 729px) {
+     // Media Queries
+    @media screen and (min-width: 768px) {
       max-width: 80vw;
       margin: 0 auto;
     }
   }
-
-
+ 
     main {
       // Common rules for specific elements
       .intro {
@@ -319,7 +319,7 @@ body {
           flex-direction: row;
           justify-content: space-between;
           gap: 1.25rem;
-
+            // Media Queries
           @media screen and (min-width: 768px) {
             justify-content: flex-start;
           }
