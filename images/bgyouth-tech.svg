@@ -1,13 +1,13 @@
-<svg width="768" height="931" viewBox="0 0 768 931" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="1980" height="1000" viewBox="0 0 1980 1000" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="hero-bg">
-<rect id="Rectangle 5" width="768" height="925" fill="#D9D9D9"/>
-<rect id="christina-wocintechchat-com-faEfWCdOKIg-unsplash 1" width="768" height="925" fill="url(#pattern0)" fill-opacity="0.1"/>
+<rect id="Rectangle 5" width="1980" height="1000" fill="#D9D9D9"/>
+<rect id="christina-wocintechchat-com-faEfWCdOKIg-unsplash 1" width="1980" height="1000" fill="url(#pattern0)" fill-opacity="0.15"/>
 <rect id="React" x="12" y="432.768" width="100" height="40.744" fill="url(#pattern1)" fill-opacity="0.2"/>
 <rect id="United Airlines" x="722" width="43" height="50.6548" fill="url(#pattern2)" fill-opacity="0.2"/>
 <rect id="The Flash Sign" x="698" y="431.667" width="36" height="41.8452" fill="url(#pattern3)" fill-opacity="0.25"/>
 <rect id="Chessboard" x="384" y="94.7024" width="47" height="33.0357" fill="url(#pattern4)" fill-opacity="0.05"/>
 <rect id="Skateboard Grip Tape" x="604" y="283.006" width="75" height="55.0595" fill="url(#pattern5)" fill-opacity="0.1"/>
-<rect id="MacBook" width="86.7281" height="82.8668" transform="matrix(0.995623 0.0934638 -0.0771838 0.997017 61.4009 758.811)" fill="url(#pattern6)" fill-opacity="0.15"/>
+<rect id="MacBook" width="86.7281" height="82.8668" transform="matrix(0.995623 0.0934638 -0.0771838 0.997017 390.396 170)" fill="url(#pattern6)" fill-opacity="0.15"/>
 <rect id="Dollar Coin" x="62" y="230.149" width="39" height="46.25" fill="url(#pattern7)" fill-opacity="0.05"/>
 <g id="Launchpad" opacity="0.15" filter="url(#filter0_i_6_21)">
 <rect x="23" y="135.446" width="54" height="49.5536" fill="url(#pattern8)"/>
@@ -50,7 +50,7 @@
 </g>
 <defs>
 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-<use xlink:href="#image0_6_21" transform="translate(-0.401911) scale(0.000939491 0.000780031)"/>
+<use xlink:href="#image0_6_21" transform="translate(0 -0.161031) scale(0.000520833 0.00103125)"/>
 </pattern>
 <pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image1_6_21" transform="translate(0.29628) scale(0.00452712 0.0111111)"/>
