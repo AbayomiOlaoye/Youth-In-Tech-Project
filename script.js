@@ -66,7 +66,6 @@ const links = document.querySelectorAll('nav a');
 
 openMenuBtn.addEventListener('click', () => {
   navBar.style.display = 'flex';
-  console.log('clicked');
 });
 
 exitBtn.addEventListener('click', () => {
