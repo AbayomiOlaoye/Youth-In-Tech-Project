@@ -30,16 +30,18 @@ body section {
 body .menu-controls {
   position: relative;
 }
+body .exit,
 body .menu {
   width: 3.5rem;
   position: absolute;
   left: 1.5rem;
   top: 1.5rem;
   z-index: 2500;
+  cursor: pointer;
 }
 body .header {
   position: relative;
-  display: flex;
+  display: block;
   z-index: 1000;
 }
 @media screen and (min-width: 768px) {
@@ -52,6 +54,7 @@ body .header {
     margin-left: 820px;
     display: block;
     z-index: 50000;
+    cursor: pointer;
   }
 }
 @media screen and (min-width: 960px) {
@@ -59,57 +62,66 @@ body .header {
     display: none;
   }
 }
-body .header .navbar {
-  position: fixed;
-  padding: 6rem 2rem;
-  margin-bottom: 2rem;
-  background-color: #ec5242;
-  z-index: 10000;
-  width: 90%;
-  height: 100%;
-  overflow: auto;
-  display: none;
-  flex-direction: column;
-  transform: transform(250ms, ease-in-out);
-}
-body .header .navbar .logo {
-  display: none;
-}
-body .header .navbar nav {
-  width: 100%;
-}
-body .header .navbar nav li {
-  position: relative;
-}
-body .header .navbar nav a {
-  font-size: 1.25rem;
-  line-height: 4rem;
-  font-weight: 700;
-  color: #d3d3d3;
-}
-body .header .navbar nav a img {
-  position: relative;
-  top: 6px;
-  padding-top: 0.5rem;
-}
-body .header .navbar .pad {
-  padding-bottom: 5rem;
-  padding-top: 1rem;
-}
-body .header .navbar .padimg {
-  top: -50px;
-}
-body .header .navbar .liner {
-  color: #272a31;
-  opacity: 0.1;
+@media screen and (max-width: 767px) {
+  body .header .navbar {
+    width: 100%;
+  }
+  body .header .navbar nav {
+    position: fixed;
+    padding: 6rem 2rem;
+    margin-bottom: 2rem;
+    background-color: #ec5242;
+    z-index: 10000;
+    width: 90%;
+    height: 100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    transform: transform(250ms, ease-in-out);
+  }
+  body .header .navbar nav .exit {
+    display: block;
+    z-index: 1000000;
+  }
+  body .header .navbar .logo {
+    display: none;
+  }
+  body .header .navbar nav {
+    width: 100%;
+  }
+  body .header .navbar nav li {
+    position: relative;
+  }
+  body .header .navbar nav a {
+    font-size: 1.25rem;
+    line-height: 4rem;
+    font-weight: 700;
+    color: #d3d3d3;
+  }
+  body .header .navbar nav a img {
+    position: relative;
+    top: 6px;
+    padding-top: 0.5rem;
+  }
+  body .header .navbar .pad {
+    padding-bottom: 5rem;
+    padding-top: 1rem;
+  }
+  body .header .navbar .padimg {
+    top: -50px;
+  }
+  body .header .navbar .liner {
+    color: #272a31;
+    opacity: 0.1;
+  }
 }
 @media screen and (min-width: 768px) {
   body .header .navbar {
-    position: relative;
+    position: absolute;
     padding: 0;
     margin: 0;
-    background-color: #fff;
-    z-index: 10000;
+    background-image: url(./images/floral-texture.jpg);
+    z-index: 10000000;
     width: 100%;
     height: 6rem;
     overflow: hidden;
@@ -118,7 +130,8 @@ body .header .navbar .liner {
     align-items: center;
     display: flex;
   }
-  body .header .navbar .liner {
+  body .header .navbar .exit,
+body .header .navbar .liner {
     display: none;
   }
   body .header .navbar .logo {
