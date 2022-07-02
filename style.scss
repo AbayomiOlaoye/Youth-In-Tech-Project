@@ -57,23 +57,45 @@ body {
     position: absolute;
     left: 1.5rem;
     top: 1.5rem;
-    z-index: 20;
+    z-index: 2500;
   }
 
 .header {
-  position: relative;
+  position: relative; //fixed earlier for mobile menu support
+  display: flex;
+  z-index: 1000;
+ 
+
+  @media screen and (min-width: 768px) {
+    height: 6.5rem;
+    width: 100%;
+    padding: 20px;
+
+    .menu {
+      margin-left: 820px;
+      display: block;
+      z-index: 50000;
+    }
+  }
   
+  @media screen and (min-width: 960px) {
+    .menu {
+      display: none;
+    }
+  }
+ 
     .navbar {
       position: fixed;
       padding: 6rem 2rem;
       margin-bottom: 2rem;
-      width: 100%;
       background-color: #ec5242;
-      z-index: 10;
+      z-index: 10000;
       width: 90%;
       height: 100%;
       overflow: auto;
       display: none;
+      flex-direction: column;
+      transform: transform(250ms, ease-in-out);
 
       .logo {
         display: none;
@@ -87,7 +109,7 @@ body {
         }
   
         a {
-          font-size: 1rem;
+          font-size: 1.25rem;
           line-height: 4rem;
           font-weight: 700;
           color: colors(grayWhite);
@@ -97,10 +119,6 @@ body {
             top: 6px;
             padding-top: 0.5rem;
           }
-        }
-
-        .hide-sm {
-          display: none;
         }
       }
 
@@ -113,19 +131,156 @@ body {
         }
       }
 
-      .hide {
-        color: colors(darkShade);
-        display: inline-block;
-        margin-left: 0.5rem;
-      }
-
-      .line {
+      .liner {
         color: colors(darkShade);
         opacity: 0.1;
       }
-    }
+  }
+  // Media queries for nav bar starts here
+  @media screen and (min-width: 768px) {
+    .navbar {
+      position: relative;
+      padding: 0;
+      margin: 0;
+      background-color: #fff;
+      z-index: 10000;
+      width: 100%;
+      height: 6rem;
+      overflow: hidden;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      display: flex;
+      
+      .liner {
+        display: none; // Separation of menu for mobile screens
+      }
+
+      .logo {
+        display: block;
+
+        .yntech-logo {
+          max-width: 150px;
+          margin: -10px 0 0 60px;
+        }
+      }
+  
+      nav {
+        width: 50%;
+
+        @media screen and (min-width: 960px) {
+          width: 100%;
+          height: 100%;
+        }
+      
+        ul {
+          display: flex;
+          flex-direction: row;
+          gap: 1rem;
+          padding: 0.25rem 0.5rem;
     
-// Ends here
+          a {
+            display: inline-block;
+            font-size: 1.25rem;
+            line-height: 1.5rem;
+            font-weight: 700;
+            color: colors(darkShade);
+  
+            img {
+              display: inline-block;
+            }
+          }
+        }
+        
+        .nav-list {
+          display: none;
+
+          @media screen and (min-width: 960px) {
+              display: flex;
+              gap: 2rem;
+              width: 100%;
+              height: inherit;
+              position: relative;
+              top: 20px;
+              left: 200px;
+
+              a {
+                font-weight: 500;
+                transform: scale(1.05);
+                transition: all 0.5s;
+
+                &:hover {
+                  color: colors(coolPink);
+                  border-bottom: 1px solid colors(darkShade);
+                  line-height: 2rem;
+                }
+
+                &:active {
+                  color: colors(coolPink);
+                  opacity: 0.7;
+                }
+              }
+          }
+
+          li a.gradient {
+              margin-left: 2rem;
+              border: 2px solid #ec5242;
+              border-radius: 20px;
+              padding: 0.5rem 1.5rem 0.75rem 1.5rem;
+              margin-top: -10px;
+              font-weight: 700;
+              color: colors(coolPink);
+              
+
+              &:hover {
+                background-color: colors(coolPink);
+                color: white;
+                border: 2px solid colors(darkShade);
+              }
+          }
+        }
+
+        .acct-detail {
+         .acct-list {
+          position: fixed;//initially fixed for mobiles
+          top: 0;
+          right: 0;
+          background-color: #272a31;
+          border-bottom-left-radius: 30px;
+          display: none;
+          width: 50px;
+
+          @media screen and (min-width: 960px) {
+            display: inline-block;
+          }
+          
+          a {
+            
+            @media screen and (min-width: 960px) {
+              img.status {
+                width:1.5rem;
+                padding: 0;
+                top: 0;
+              }
+
+              .tweet {
+                top: -20px;
+              }
+
+              .acct {
+                top: -50px;
+              }
+            }
+          }
+
+          .pad {
+            padding: 0 0.5rem 0 0;
+          }
+         }
+        }
+      }
+    }
+  }// Nav bar ends here
 }
 
   .container {
@@ -138,7 +293,7 @@ body {
     }
      // Media Queries
     @media screen and (min-width: 768px) {
-      max-width: 80vw;
+      max-width: 90vw;
       margin: 0 auto;
     }
   }
@@ -158,6 +313,10 @@ body {
         margin: 0 auto 2rem auto;
         color: colors(coolPink);
       }
+
+    @media screen and (min-width:768px) {
+      margin-top: 30px;
+    }
     
       // Rules for hero page
       .welcome {
@@ -165,13 +324,20 @@ body {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: 100% 100%;
+
+        .masked {
+          background-image: url(./images/mask-extra.png);
+          background-repeat: repeat;
+          background-size: auto;
+
+        }
         
         .intro.gradient {
           font-family: $text;
           font-size: 1.5rem;
           font-weight: 400;
           background-image: -webkit-linear-gradient(-35deg, #f65112, #a00000, #f40001, #ec5242);
-          background-clip: text;
+          -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           margin-top: 6.5rem;
           text-align: left;
@@ -179,14 +345,13 @@ body {
 
         .theme {
           font-family: $title;
-          font-size: 4.5rem;
-          line-height: 4.5rem;
+          font-size: 4rem;
+          line-height: 5rem;
           padding-top: 1rem;
-          //max-width: ;
-          background-image: -webkit-linear-gradient(-35deg, #a00000, #f65112, #ec5242, #f40001, #ec5242);
-          background-clip: text;
+          -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-size: 300%;
+          background-image: -webkit-linear-gradient(45deg, #f40001, #ec5242, rgb(255, 64, 0), rgb(255, 123, 0), #a00000, #f65112, #ec5242);
           animation: theme-motion 10s infinite alternate;
 
           @keyframes theme-motion {
@@ -207,6 +372,16 @@ body {
               background-position: right;
             }
           }
+          //media query @609 max
+          @media screen and (max-width: 609px) {
+            max-width: 95%;
+            font-size: 9vw;
+            line-height: 10vw;
+          }
+
+          @media screen and (min-width:768px) {
+            font-size: 4.5rem;
+          }
         }
 
         .intro-text {
@@ -215,18 +390,39 @@ body {
           padding: 1rem;
           border: 2px solid #fff;
           border-radius: 0.25rem;
+
+          @media screen and (min-width: 768px) {
+            max-width: 60vw;
+            font-size: 130%;
+            line-height: 2rem;
+          }
         }
 
         .date {
           font-size: 1.8rem;
-          font-weight: 400;
+          font-weight: 600;
           font-family: $title;
+
+           //media query @609 max
+           @media screen and (max-width: 609px) {
+            font-size: 5vw;
+            line-height: 2.85rem;
+          }
           
+          @media screen and (min-width: 960px) {
+            font-size: 2.5rem;
+            line-height: 4vw;
+          }
         }
 
         address {
           font-size: 1rem;
-          padding: 0.5rem 0 4rem 0
+          padding: 0 0 7rem 0;
+          line-height: 3vw;
+
+          @media screen and (min-width: 960px) {
+            font-size: 1.5rem;
+          }
         }
       }
 
@@ -236,7 +432,7 @@ body {
       background-repeat: repeat;
       background-size: auto;
       width: 100%;
-      height: auto;
+      min-height: 500px;
 
       .program {
         display: flex;
@@ -244,59 +440,130 @@ body {
         gap: 1rem;
         justify-content: space-between;
 
+        @media screen  and (min-width: 768px) {
+          display: grid;
+          grid-template-columns: repeat(5, minmax(165px, 1fr));
+          border: none;
+          gap: 1px;
+          height: 100%;
+          padding: 2rem 0;
+          text-align: center;
+        }
+
         .pro-cards {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
           padding: 1rem;
           align-items: center;
-          flex-wrap: nowrap;
-          background-color: rgba(211, 211, 211, 0.2);
+          flex-wrap: no-wrap;
+          background-color: rgba(255, 255, 255, 0.1);
           color: colors(grayWhite);
           gap: 0.5rem;
           border-radius: 5px;
 
+          @media screen  and (min-width: 768px) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 0.25rem;
+            box-shadow: 2px 2px 10x 20px;
+            border-radius: 0;
+            height: auto;
+            min-height: 160px;
+
+          &:hover {
+            border: 2px solid #fff;
+          }
+        }
+
           img {
-            width: 10%;
+            width: 15%;
             min-width: 3rem;
             margin: 0.5rem 0 0 0;
+
+            @media screen  and (min-width: 768px) {
+              margin-top: 0.6rem;
+              width: 45%;
+            }
           }
 
           .feat-bold {
-            width: 20%;
+            max-width: 20%;
             color: colors(coolPink);
             font-weight: 700;
-            font-size: 1rem;
+            font-size: 1.25rem;
             line-height: 1.25rem;
+
+            @media screen  and (min-width: 768px) {
+              width: 100%;
+              max-width: 220px;
+              font-weight: 600;
+              font-size: 1.35rem;
+              line-height: 1.5rem;
+              text-align: center;
+            }
           }
 
           .small-text {
-            width: 60%;
+            width: 40%;
             font-size: 0.8rem;
             line-height: 1.5rem;
             font-weight: 700;
-          }
-        }
 
-        a.intro {
-          font-size: 1rem;
-          font-weight: 700;
-          color: colors(grayWhite);
-          margin-top: 2.5rem;
-
-          &.lg {
-            display: none;
-            text-transform: uppercase;
-            text-decoration: underline;
-          }
-
-          &.sm {
-            background-color: colors(coolPink);
-            padding: 1.5rem 2rem;
-            border-radius: 5px;
+            @media screen and (min-width:768px) {
+                width: 100%;
+                line-height: 1.25rem;
+                font-weight: 500;
+                min-height: 150px;
+            }
           }
         }
       }
+
+      a.intro {
+        font-size: 1rem;
+        font-weight: 700;
+        color: colors(grayWhite);
+        margin-top: 2.5rem;
+
+        &.lg {
+          display: none;
+          text-transform: uppercase;
+          text-decoration: underline;
+
+          @media screen and (min-width: 768px) {
+            display: block;
+
+            &:hover {
+              color: colors(coolPink);
+            }
+          }
+        }
+
+        &.sm {
+          display: block;
+          width: 80%;
+          font-size: 3.5vw;
+          background-color: colors(coolPink);
+          padding: 1.5rem 2rem;
+          border-radius: 5px;
+          box-shadow: 0.5px 0.5px 3px 1px #000;
+          transform: scale(1.05);
+          transition: all 0.3s ease-out;
+
+          &:hover {
+            color: colors(coolPink);
+            background: colors(darkShade);
+            box-shadow: none;
+          }
+
+          @media screen and (min-width: 768px) {
+            display: none;
+          }
+        }
+      }
+
     }
     
     // Declarations for Speaker's section async as JSON
@@ -304,6 +571,7 @@ body {
       h3.intro {
         text-align: center;
       }
+
       .intro {
         color: colors(darkShade);
         text-align: left;
@@ -313,16 +581,43 @@ body {
         display: flex;
         flex-direction: column;
         gap: 1.5rem;
+        position: relative;
+        padding-top: 2rem;
+
+        .full {
+          display: none;
+        }
+        
+        //Media Query
+      @media screen and (min-width: 768px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 4rem;
+
+        .full {
+          display: block;
+          position: absolute;
+          width: 100%;
+
+          &.one {
+            top: 37%;
+          }
+
+          &.two {
+            top: 70%;
+          }
+        }
+
+        .speaker {
+          justify-content: flex-start;
+        }
+      }
 
         .speaker {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
           gap: 1.25rem;
-            // Media Queries
-          @media screen and (min-width: 768px) {
-            justify-content: flex-start;
-          }
 
           img {
             max-width: 110px;
@@ -339,7 +634,6 @@ body {
           }
 
           .line {
-            //text-align: left;
             margin: 0.5rem 0 0.8rem 0;
             width: 5%;
             opacity: 0.3;
@@ -378,15 +672,20 @@ body {
   // Footer styling rules begins
   footer {
     width: 100%;
-    text-align: left;
     font-size: 0.8rem;
     line-height: 1.15rem;
+    font-weight: 600;
 
     .container {
       display: flex;
-      gap: 2rem;
-      justify-content: space-between;
+      gap: 4rem;
+      justify-content: flex-start;
       align-items: center;
+
+      @media screen and (min-width: 768px) {
+        justify-content: center;
+        margin: 0 auto;
+      }
 
       img {
         max-width: 150px;
@@ -405,11 +704,32 @@ body {
 
 // Rules for about.html page
 .aboutYnT {
+  
   .about {
     background-image: url(./images/masked.svg);
     background-repeat: no-repeat;
     background-size: auto;
-    background-position: top 100px right;
+    background-position: top 380px left 50px;
+
+    @media screen and (min-width: 768px) {
+      margin: 0 auto;
+      width: 80vw;
+
+      h1.theme {
+        text-align: center;
+        margin: 6rem auto;
+      }
+
+      .gradient {
+        display: none;
+      }
+
+      p.intro-text {
+        text-align: center;
+        margin: 3rem auto;
+        padding: 2rem 3rem;
+      }
+    }
 
     .text {
       text-align: center;
@@ -430,7 +750,6 @@ body {
           opacity: 0.8;
         }
       }
-
     }
   }
 }
@@ -439,6 +758,31 @@ body {
 .about-logo {
   background-color: #fff;
 
+  @media screen and (min-width: 960px) {
+    background-image: url(./images/mask3.png);
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: top 0 right 150px;
+    
+    .intro-text {
+      max-width: 80%;
+      margin: 3rem auto;
+      font-size: 1.25rem;
+      line-height: 2rem;
+    }
+    
+    .container {
+     display: grid;
+     grid-template-columns: 1fr;
+     max-width: 60%;
+    }
+
+    img {
+      width: 100%;
+      padding-bottom: 1rem;
+    }
+  }
+
   .intro {
     color: colors(darkShade);
     line-height: 1.95rem;
@@ -446,6 +790,7 @@ body {
 
   .intro-text {
     text-align: center;
+    max-width: 700px;
   }
 
   .specimen {
@@ -483,6 +828,13 @@ body {
     text-align: center;
     font-family: $title;
 
+    @media screen and (min-width: 960px) {
+      width: 70%;
+      margin: 2rem auto 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
     img {
       width:100%;
       max-width: 400px;
@@ -516,7 +868,10 @@ body {
     &:hover .overlay-text { // to be toggled with javascript
       display: none;
     }
-  }
-  
+  } 
 }
 
+  .desk {
+    background-color: rgba(39, 42, 49, 0.9);
+    color: colors(grayWhite);
+  }
