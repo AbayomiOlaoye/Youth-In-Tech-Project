@@ -9,13 +9,12 @@
       }
     ],
     "scss/at-rule-no-unknown":  [
-      false,
+      true,
       {
         "ignoreAtRules": ["tailwind", "apply", "variants", "responsive", "screen"]
       }
     ],
     "csstree/validator": true,
-    "scss/dollar-variable-pattern": "^foo",
     "scss/selector-no-redundant-nesting-selector": true
   },
   "ignoreFiles": ["build/**", "dist/**", "**/reset*.css", "**/bootstrap*.css", "**/*.js", "**/*.jsx"],
