@@ -3,18 +3,20 @@
   "plugins": ["stylelint-scss", "stylelint-csstree-validator"],
   "rules": {
     "at-rule-no-unknown": [
-      true,
+      null,
       {
         "ignoreAtRules": ["tailwind", "apply", "variants", "responsive", "screen"]
       }
     ],
     "scss/at-rule-no-unknown":  [
-      true,
+      false,
       {
         "ignoreAtRules": ["tailwind", "apply", "variants", "responsive", "screen"]
       }
     ],
-    "csstree/validator": true
+    "csstree/validator": true,
+    "scss/dollar-variable-pattern": "^foo",
+    "scss/selector-no-redundant-nesting-selector": true
   },
   "ignoreFiles": ["build/**", "dist/**", "**/reset*.css", "**/bootstrap*.css", "**/*.js", "**/*.jsx"],
   "editor.codeActionsOnSave": {

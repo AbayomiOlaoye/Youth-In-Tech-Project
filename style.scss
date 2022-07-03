@@ -6,9 +6,9 @@ $title: 'cocogoose', sans-serif;
 $text: 'lato', sans-serif;
 
 $colors: (
-  darkShade: #272a31,
-  coolPink: #ec5242,
-  grayWhite: #d3d3d3
+  darkshade: #272a31,
+  coolpink: #ec5242,
+  graywhite: #d3d3d3
 );
 
 // Setting up functions for ease of use for the mapped values
@@ -33,11 +33,11 @@ body {
   width: 100%;
   height: 100vh;
   line-height: 1.5rem;
-  color: colors(darkShade);
+  color: colors(darkshade);
 
   a {
     text-decoration: none;
-    color: colors(darkShade);
+    color: colors(darkshade);
   }
 
   li {
@@ -90,6 +90,7 @@ body {
   @media screen and (max-width: 767px){
     .navbar {
       width: 100%;
+
       nav {
         position: fixed;
         padding: 6rem 2rem;
@@ -113,9 +114,6 @@ body {
       .logo {
         display: none;
       }
-  
-      nav {
-        width: 100%;
 
         li {
           position: relative;
@@ -125,7 +123,7 @@ body {
           font-size: 1.25rem;
           line-height: 4rem;
           font-weight: 700;
-          color: colors(grayWhite);
+          color: colors(graywhite);
 
           img {
             position: relative;
@@ -133,19 +131,18 @@ body {
             padding-top: 0.5rem;
           }
         }
-      }
 
       .pad {
         padding-bottom: 5rem;
         padding-top: 1rem;
 
-        &img {
+        & img {
           top: -50px;
         }
       }
 
       .liner {
-        color: colors(darkShade);
+        color: colors(darkshade);
         opacity: 0.1;
       }
   }
@@ -199,7 +196,7 @@ body {
             font-size: 1.25rem;
             line-height: 1.5rem;
             font-weight: 700;
-            color: colors(darkShade);
+            color: colors(darkshade);
   
             img {
               display: inline-block;
@@ -225,13 +222,13 @@ body {
                 transition: all 0.5s;
 
                 &:hover {
-                  color: colors(coolPink);
-                  border-bottom: 1px solid colors(darkShade);
+                  color: colors(coolpink);
+                  border-bottom: 1px solid colors(darkshade);
                   line-height: 2rem;
                 }
 
                 &:active {
-                  color: colors(coolPink);
+                  color: colors(coolpink);
                   opacity: 0.7;
                 }
               }
@@ -244,13 +241,13 @@ body {
               padding: 0.5rem 1.5rem 0.75rem 1.5rem;
               margin-top: -10px;
               font-weight: 700;
-              color: colors(coolPink);
+              color: colors(coolpink);
               
 
               &:hover {
-                background-color: colors(coolPink);
+                background-color: colors(coolpink);
                 color: white;
-                border: 2px solid colors(darkShade);
+                border: 2px solid colors(darkshade);
               }
           }
         }
@@ -317,7 +314,7 @@ body {
       // Common rules for specific elements
       .intro {
         font-size: 1.5rem;
-        color: colors(grayWhite);
+        color: colors(graywhite);
         margin: 0 auto 1rem auto;
         text-align: center;
       }
@@ -326,7 +323,7 @@ body {
         width: 10%;
         text-align: center;
         margin: 0 auto 2rem auto;
-        color: colors(coolPink);
+        color: colors(coolpink);
       }
 
     @media screen and (min-width:768px) {
@@ -401,7 +398,7 @@ body {
 
         .intro-text {
           margin: 2rem 0;
-          background-color: colors(grayWhite);
+          background-color: colors(graywhite);
           padding: 1rem;
           border: 2px solid #fff;
           border-radius: 0.25rem;
@@ -473,7 +470,7 @@ body {
           align-items: center;
           flex-wrap: no-wrap;
           background-color: rgba(255, 255, 255, 0.1);
-          color: colors(grayWhite);
+          color: colors(graywhite);
           gap: 0.5rem;
           border-radius: 5px;
 
@@ -505,7 +502,7 @@ body {
 
           .feat-bold {
             max-width: 20%;
-            color: colors(coolPink);
+            color: colors(coolpink);
             font-weight: 700;
             font-size: 1.25rem;
             line-height: 1.25rem;
@@ -539,7 +536,7 @@ body {
       a.intro {
         font-size: 1rem;
         font-weight: 700;
-        color: colors(grayWhite);
+        color: colors(graywhite);
         margin-top: 2.5rem;
 
         &.lg {
@@ -551,7 +548,7 @@ body {
             display: block;
 
             &:hover {
-              color: colors(coolPink);
+              color: colors(coolpink);
             }
           }
         }
@@ -560,7 +557,7 @@ body {
           display: block;
           width: 80%;
           font-size: 3.5vw;
-          background-color: colors(coolPink);
+          background-color: colors(coolpink);
           padding: 1.5rem 2rem;
           border-radius: 5px;
           box-shadow: 0.5px 0.5px 3px 1px #000;
@@ -568,8 +565,8 @@ body {
           transition: all 0.3s ease-out;
 
           &:hover {
-            color: colors(coolPink);
-            background: colors(darkShade);
+            color: colors(coolpink);
+            background: colors(darkshade);
             box-shadow: none;
           }
 
@@ -588,7 +585,7 @@ body {
       }
 
       .intro {
-        color: colors(darkShade);
+        color: colors(darkshade);
         text-align: left;
       }
 
@@ -652,11 +649,11 @@ body {
             margin: 0.5rem 0 0.8rem 0;
             width: 5%;
             opacity: 0.3;
-            color: colors(darkShade);
+            color: colors(darkshade);
           }
 
           .info {
-            color: colors(coolPink);
+            color: colors(coolpink);
           }
         }
       }
@@ -664,7 +661,7 @@ body {
 
     //Sponsors & Partners
     .partners {
-      background-color: colors(darkShade);
+      background-color: colors(darkshade);
       .intro {
         opacity: 0.5;
       }
@@ -707,7 +704,7 @@ body {
       }
 
       a {
-        color: colors(coolPink);
+        color: colors(coolpink);
       }
 
       .foot-note {
@@ -750,7 +747,7 @@ body {
       text-align: center;
       
       span {
-        color: colors(coolPink);
+        color: colors(coolpink);
         font-weight: bold;
       }
 
@@ -761,7 +758,7 @@ body {
         cursor: pointer;
 
         &:hover {
-          color: colors(coolPink);
+          color: colors(coolpink);
           opacity: 0.8;
         }
       }
@@ -799,7 +796,7 @@ body {
   }
 
   .intro {
-    color: colors(darkShade);
+    color: colors(darkshade);
     line-height: 1.95rem;
   }
 
@@ -810,7 +807,7 @@ body {
 
   .specimen {
     margin: 2rem 0;
-    border: 2px solid colors(grayWhite);
+    border: 2px solid colors(graywhite);
     padding: 1.5rem;
     text-align: center;
 
@@ -824,9 +821,9 @@ body {
 
 // Events section
 .events {
-  background-color: colors(grayWhite);
+  background-color: colors(graywhite);
   .intro {
-    color: colors(darkShade);
+    color: colors(darkshade);
     line-height: 1.95rem;
   }
 
@@ -888,5 +885,5 @@ body {
 
   .desk {
     background-color: rgba(39, 42, 49, 0.9);
-    color: colors(grayWhite);
+    color: colors(graywhite);
   }
