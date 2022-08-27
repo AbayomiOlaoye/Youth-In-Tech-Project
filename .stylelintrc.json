@@ -2,8 +2,9 @@
   "extends": ["stylelint-config-standard"],
   "plugins": ["stylelint-scss", "stylelint-csstree-validator"],
   "rules": {
+    "no-descending-specificity": null,
     "at-rule-no-unknown": [
-      null,
+      true,
       {
         "ignoreAtRules": ["tailwind", "apply", "variants", "responsive", "screen"]
       }
