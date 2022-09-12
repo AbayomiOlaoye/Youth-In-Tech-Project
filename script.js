@@ -51,6 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
           <p class="abt-speaker">${speaker.shortBio}</p>
         </div>
       </div>
+      <hr class="line full one">
+      <hr class="line full two">
      `;
   }
 
@@ -60,7 +62,7 @@ ${featureSpeaker.map(meetSpeakers).join('')}`;
 
 // Menu control Logic
 const openMenuBtn = document.querySelector('.menu');
-const exitBtn = document.querySelector('.exit');
+const exitBtn = document.querySelector('img.exit');
 const navBar = document.querySelector('.navbar');
 const links = document.querySelectorAll('nav a');
 

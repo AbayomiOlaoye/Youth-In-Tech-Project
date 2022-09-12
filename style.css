@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   position: relative;
   font-family: "lato", sans-serif;
@@ -36,11 +40,13 @@ body .menu {
   left: 1.5rem;
   top: 1.5rem;
   z-index: 2500;
+  cursor: pointer;
 }
 body .header {
   position: relative;
   display: flex;
   z-index: 1000;
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   body .header {
@@ -128,8 +134,8 @@ body .header .navbar .liner {
     max-width: 150px;
     margin: -10px 0 0 60px;
   }
-  body .header .navbar nav {
-    width: 50%;
+  body .header .navbar nav .exit {
+    display: none;
   }
 }
 @media screen and (min-width: 768px) and (min-width: 960px) {
@@ -154,11 +160,6 @@ body .header .navbar .liner {
   }
   body .header .navbar nav ul a img {
     display: inline-block;
-  }
-}
-@media screen and (min-width: 768px) {
-  body .header .navbar nav .nav-list {
-    display: none;
   }
 }
 @media screen and (min-width: 768px) and (min-width: 960px) {
@@ -194,15 +195,17 @@ body .header .navbar .liner {
     padding: 0.5rem 1.5rem 0.75rem 1.5rem;
     margin-top: -10px;
     font-weight: 700;
-    color: #ec5242;
+    background-image: -webkit-linear-gradient(-75deg, #f65112, #a00000, #f40001);
+    color: white;
   }
   body .header .navbar nav .nav-list li a.gradient:hover {
     background-color: #ec5242;
-    color: white;
-    border: 2px solid #272a31;
   }
 }
 @media screen and (min-width: 768px) {
+  body .header .navbar nav .acct-detail {
+    position: relative;
+  }
   body .header .navbar nav .acct-detail .acct-list {
     position: fixed;
     top: 0;
@@ -423,7 +426,6 @@ body main .features .program .pro-cards {
     justify-content: center;
     align-items: center;
     padding: 0.25rem;
-    box-shadow: 2px 2px 10px 20px;
     border-radius: 0;
     height: auto;
     min-height: 160px;
