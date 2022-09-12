@@ -40,12 +40,14 @@ Open your code editor, open the folder (cloned repo) and play around with the co
 - Twitter: [@olaoyeelijah](https://twitter.com/olaoyeelijah)
 - LinkedIn: [Oluwatoyin](https://linkedin.com/in/oluwatoyinolaoye)
 
+## Acknowledgement 
+ This project is premised and inspired by [Cindy Shin](https://www.behance.net/adagio07), who is the [author of the original design](https://www.behance.net/gallery/29845175/CC-Global-Summit-2015).
 
 ## Show your support 
 
 Give a ⭐️ if you like this project from a beginner like me!
 
-## Acknowledgments
+## 👍🏼Acknowledgments
 
 - Special thanks to @microverse for this opportunity
 - A worthy acknowledgment of my colleagues who presently serve as code reviewers in the institute for their constructive feedback.
