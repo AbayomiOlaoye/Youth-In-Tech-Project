@@ -3,7 +3,7 @@
 Here's my first capstone project, featuring a young and dynamic group of youngsters in tech. The project eas inspired by my crave to see young minds being inspired by their colleagues who have seized the opportunity to learn the language of the future - not only for the security it affords but the feeling of accomplishment it bestows. I really hope to see my fellow country young men to dare and dive into this atmosphere of CHANGE for a better World. 
 
 ## Live Presentation Video Link
-https://www.loom.com/share/df9b50bd237d4c51948291ffd7a39161
+https://www.loom.com/share/79097e4bbd2e4cbcb02393282aa9eee3
 
 ## Built With:
 
@@ -36,9 +36,9 @@ Open your code editor, open the folder (cloned repo) and play around with the co
 
 👤 **Oluwatoyin Olaoye**
 
-- GitHub: [@MindPrepDev](https://github.com/AbayomiOlaoye)
+- GitHub: [@AbayomiOlaoye](https://github.com/AbayomiOlaoye)
 - Twitter: [@olaoyeelijah](https://twitter.com/olaoyeelijah)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/oluwatoyinolaoye)
+- LinkedIn: [Oluwatoyin](https://linkedin.com/in/oluwatoyinolaoye)
 
 
 ## Show your support 
