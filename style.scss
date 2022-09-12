@@ -193,7 +193,6 @@ body {
           }
 
           .nav-list {
-
             @media screen and (min-width: 960px) {
               display: flex;
               gap: 2rem;
@@ -239,6 +238,7 @@ body {
 
           .acct-detail {
             position: relative;
+
             .acct-list {
               position: fixed;
               top: 0;
