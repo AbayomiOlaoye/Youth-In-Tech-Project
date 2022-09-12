@@ -2,6 +2,7 @@
   "extends": ["stylelint-config-standard"],
   "plugins": ["stylelint-scss", "stylelint-csstree-validator"],
   "rules": {
+    "no-descending-specificity": null,
     "at-rule-no-unknown": [
       true,
       {
@@ -14,7 +15,11 @@
         "ignoreAtRules": ["tailwind", "apply", "variants", "responsive", "screen"]
       }
     ],
-    "csstree/validator": true
+    "csstree/validator": true,
+    "scss/selector-no-redundant-nesting-selector": true
   },
-  "ignoreFiles": ["build/**", "dist/**", "**/reset*.css", "**/bootstrap*.css", "**/*.js", "**/*.jsx"]
+  "ignoreFiles": ["build/**", "dist/**", "**/reset*.css", "**/bootstrap*.css", "**/*.js", "**/*.jsx"],
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  }
 }
