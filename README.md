@@ -1,6 +1,6 @@
 ![Y'n'Tech Global Summit](https://img.shields.io/badge/Y'n'Tech_Global-Summit-000000?style=for-the-badge&logo=Y'n'Tech&logoColor=white)
 # Youth-In-Tech-Project
-Here's my first capstone project, featuring a young and dynamic group of youngsters in tech. The project eas inspired by my crave to see young minds being inspired by their colleagues who have seized the opportunity to learn the language of the future - not only for the security it affords but the feeling of accomplishment it bestows. I really hope to see my fellow country young men to dare and dive into this atmosphere of CHANGE for a better World. 
+Here's my first capstone project, featuring a young and dynamic group of youngsters in tech. The project was inspired by my crave to see young minds being inspired by their colleagues who have seized the opportunity to learn the language of the future - not only for the security it affords but the feeling of accomplishment it bestows. I really hope to see my fellow country young men dare and dive into this atmosphere of CHANGE for a better World. 
 
 ## Live Presentation Video Link
 https://www.loom.com/share/79097e4bbd2e4cbcb02393282aa9eee3
